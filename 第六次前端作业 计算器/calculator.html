@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Calculator</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="cal">
+        <table cellspacing="0">
+            <tr>
+                <td class="screen" colspan="5" id="content"></td>
+            </tr>
+            <tr>
+                <td class="result" colspan="5" id="result"></td>
+            </tr>
+            <tr>
+                <td class="numkey btn" onclick="appContent(this)">7</td>
+                <td class="numkey btn" onclick="appContent(this)">8</td>
+                <td class="numkey btn" onclick="appContent(this)">9</td>
+                <td class="op btn calop" onclick="appContent(this)">+</td>
+                <td class="op btn" onclick="appContent(this)">AC</td>
+            </tr>
+            <tr>
+                <td class="numkey btn" onclick="appContent(this)">4</td>
+                <td class="numkey btn" onclick="appContent(this)">5</td>
+                <td class="numkey btn" onclick="appContent(this)">6</td>
+                <td class="op btn calop" onclick="appContent(this)">-</td>
+                <td class="op btn" onclick="appContent(this)">DEL</td>
+            </tr>
+            <tr>
+                <td class="numkey btn" onclick="appContent(this)">1</td>
+                <td class="numkey btn" onclick="appContent(this)">2</td>
+                <td class="numkey btn" onclick="appContent(this)">3</td>
+                <td class="op btn calop" onclick="appContent(this)">x</td>
+                <td class="op btn" onclick="appContent(this)">(</td>
+            </tr>
+            <tr>
+                <td class="numkey btn" onclick="appContent(this)">.</td>
+                <td class="numkey btn" onclick="appContent(this)">0</td>
+                <td class="numkey btn" onclick="appContent(this)">=</td>
+                <td class="op btn calop" onclick="appContent(this)">÷</td>
+                <td class="op btn" onclick="appContent(this)">)</td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" src="js/cal.js"></script>
+</body>
+</html>

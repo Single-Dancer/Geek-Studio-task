@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>tab栏切换效果</title>
+ <style media="screen">
+  *{
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  outline: none;
+  background-color: grey;
+  }
+  #tabs button {
+  width: 90px;
+  height: 35px;
+  float: left;
+  /*background-color: #f2f2f2;*/
+  color: black;
+  }
+  #content-box div {
+  width: 270px;
+  height: 325px;
+  color: #0da4d3;
+  background-color: white;
+  font-size: 60px;
+  padding-top: 60px;
+  text-align: center;
+  display: none;
+  }
+  .tab-current{
+  background-color: #eb923f;
+  }
+ </style>
+ <script type="text/javascript">
+  window.onload = function () {
+  var btns = document.getElementById("tabs").getElementsByTagName("button");
+  var divs = document.getElementById("content-box").getElementsByTagName("div");
+  for (var i = 0; i < btns.length; i++) {
+   btns[i].index = i; //自定义属性，用于关联下面的大盒子
+   btns[i].onclick = function () {
+
+   for (var j = 0; j < btns.length; j++) {
+    //把所有的button清空类名
+    btns[j].className = "";
+   }
+   //点击的那个盒子添加指定类名
+   this.className = "tab-current";
+   for (var i = 0; i < divs.length; i++) {
+    //先让底下的div全部隐藏
+    divs[i].style.display = "none";
+   }
+   //然后给当前所点击按钮相关联的盒子添加指定属性
+   divs[this.index].style.display = "block";
+   }
+  }
+  }
+
+  // json
+  var JSONObject_1 = {
+    "title1":"设计文章",
+    "post1": [
+        "金三银四求职季，我总结了这份超全面的面试...",
+        "Airbnb团队负责人：硅谷新兴的产品内容策略...",
+        "你要的三八节文案来了",
+        "阿里设计师：如何用动效创新方法解决产品问...",
+        "版本控制工具 Abstract 是如何提升设计团队协作效率的？",
+        "腾讯干货！虚拟To B支付设计研究之设计思考篇",
+        "用户体验和可用性之间的联系和差异，你都知道吗？",
+        "学会这简单几招，字体设计也能萌萌哒！",
+        "腾讯干货！虚拟To B支付设计研究之设计思考篇",
+        "如何打造极简设计？来看英才APP的实战案例！"
+    ]
+};
+document.getElementById("title1").innerHTML = JSONObject_1.title1;
+document.getElementById("post1").innerHTML = "<li>"+JSONObject_1.post2[0]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[1]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[2]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[3]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[4]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[5]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[6]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[7]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[8]+"</li>"
+                                            +"<li>"+JSONObject_1.post2[9]+"</li>"
+
+
+var JSONObject_2 = {
+    "title2":"职场规划",
+    "post2": [
+        "36氪产品总监：求职应该怎么问答+面试官是如何打分的",
+        "想转职成为用户体验设计师？你得从现在开始做这7件事情",
+        "系列三部曲！中国式草根设计师的工作困境分析",
+        "系列三部曲！中国式草根设计师的从业现状分析",
+        "这些好习惯塑造了优秀而专业的用户体验设计师",
+        "成功通过Uber 的设计挑战面试后，我总结了这些方法",
+        "设计稿总监都通过了，前端哥哥却说实现不了…",
+        "全新案例！优设零基础学AI 插画第九期课程开班啦",
+        "优设木鼠UI特训班第五期，最后27个名额！",
+        "2018年，每个有追求的设计师都需要面对6个挑战"
+    ]
+};
+document.getElementById("title2").innerHTML = JSONObject_2.title2;
+document.getElementById("post2").innerHTML = "<li>"+JSONObject_2.post2[0]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[1]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[2]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[3]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[4]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[5]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[6]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[7]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[8]+"</li>"
+                                            +"<li>"+JSONObject_2.post2[9]+"</li>"
+
+
+var JSONObject_3 = {
+    "title3":"优设专题",
+    "post3": [
+        "优设新年专题！2018年最值得阅读的设计书单合集",
+        "优设年度盘点专题！2017年最受欢迎的设计风格合集",
+        "优设年度盘点专题！2017年最受欢迎的UI设计合集",
+        "优设年度专题盘点！2017年最受欢迎的电商设计干货合集",
+        "优设年度专题盘点！2017年最受欢迎的设计趣文合集",
+        "超全面！海报设计零基础学习指南",
+        "从信黑体到腾讯字体，优设专访顶尖字体设计师许瀚文",
+        "设计师必读！从零开始掌握Dribbble 的基础和进阶玩法",
+        "超全面的PPT 零基础自学指南！（附素材和神器）",
+        "独家福利！零基础也能快速抠图的在线抠图神器大合集"
+    ]
+};
+document.getElementById("title3").innerHTML = JSONObject_3.title3;
+document.getElementById("post3").innerHTML = "<li>"+JSONObject_3.post2[0]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[1]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[2]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[3]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[4]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[5]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[6]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[7]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[8]+"</li>"
+                                            +"<li>"+JSONObject_3.post2[9]+"</li>"
+
+ </script>
+ </head>
+ <body>
+ <div class="post-container">
+  <div id="tabs">
+  <button id="title1" class="tab-current">2</button>
+  <button id="title2">1</button>
+  <button id="title3">3</button>
+  </div>
+  <div id="content-box">
+  <div id="post1" style="display:block;"></div>
+  <div id="post2"></div>
+  <div id="post3"></div>
+  </div>
+ </div>
+ </body>
+</html>

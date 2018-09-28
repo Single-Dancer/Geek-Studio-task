@@ -1,0 +1,13 @@
+ .tform{
+        height: auto;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top:30%;
+    }
+    body{
+        background-color:#ffffff ;
+    }
+    .msgOne, .msgTwo{
+        visibility : hidden;
+    }

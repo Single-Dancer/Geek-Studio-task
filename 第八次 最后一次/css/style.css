@@ -1,0 +1,23 @@
+#main{
+	overflow: hidden;
+	column-count:2;
+}
+#main img{
+	float: left;
+}
+#main p{
+	position: relative;
+	top: 20px;
+	left:80px;
+	line-height: 30px;
+	font-weight: bold;
+}
+#main li{
+	position: relative;
+	top: 20px;
+	left:80px;
+	line-height: 30px;
+	font-weight: bold;
+	/*word-break: normal;*/
+	/*display: inline;*/
+}
