@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-text & v-html</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+<h1>v-text & v-html</h1>
+<hr>
+<div id="app">
+    <span>{{message}}</span>
+    <hr>
+    <span>{{dodo}}</span>
+    <hr>
+    <span v-text="message"></span>
+    <hr>
+    <span v-html="dodo"></span>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el:'#app',
+        data: {
+            message: 'hello world!',
+            dodo:'<h2>hello world by h2</h2>'
+        //    在生产环境中动态渲染HTML是非常危险的，因为容易导致XSS攻击。所以只能在可信的内容上使用v-html，永远不要在用户提交和可操作的网页上使用
+        }
+    })
+</script>
+</body>
+</html>

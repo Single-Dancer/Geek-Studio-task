@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+<h1>v-on</h1>
+<hr>
+<div id="app">
+    本场比赛得分 : {{score}}
+    <p>
+        <button v-on:click="addScore">加分</button>
+        <button @click="reduceScore">扣分</button>
+        <hr>
+        <span>键入数字,按下"↑"加分</span>
+        <input type="text" v-on:keyup.38="onEnter" v-model="score_add">
+    <hr>
+    <span>键入数字,按下"↓"减分</span>
+        <input type="text" v-on:keyup.40="onEnter_1" v-model="score_reduce">
+    </p>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el:'#app',
+        data: {
+            score: 0,
+            score_add:1,
+            score_reduce:1
+        },
+        methods: {
+            addScore:function () {
+                this.score++;
+            },
+            reduceScore:function () {
+                this.score--;
+            },
+            onEnter:function () {
+                this.score=this.score + parseInt(this.score_add);
+            },
+            onEnter_1:function () {
+                this.score=this.score - parseInt(this.score_reduce);
+            }
+        }
+    })
+</script>
+</body>
+</html>
